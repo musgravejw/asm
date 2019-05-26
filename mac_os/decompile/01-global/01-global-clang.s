@@ -1,5 +1,5 @@
 	.section	__TEXT,__text,regular,pure_instructions
-	.macosx_version_min 10, 13
+	.macosx_version_min 10, 14
 	.intel_syntax noprefix
 	.globl	_main
 	.p2align	4, 0x90
@@ -14,6 +14,7 @@ Lcfi1:
 	mov	rbp, rsp
 Lcfi2:
 	.cfi_def_cfa_register rbp
+	xor	eax, eax
 	pop	rbp
 	ret
 	.cfi_endproc
