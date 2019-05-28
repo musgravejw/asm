@@ -1,5 +1,5 @@
 gcc:
-	gcc -w -S -masm=intel *gcc.c
+	gcc -w -S -masm=intel -fno-asynchronous-unwind-tables *gcc.c
 clang:
 	clang -O0 -mllvm --x86-asm-syntax=intel *clang.c -S 
 as:
